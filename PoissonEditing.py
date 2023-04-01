@@ -73,11 +73,9 @@ class PoissonEditing:
         if cloning:
             # inside the mask:   
             target_flat = dest.flatten()
-            print(target_flat)
             mat_b = laplacian.dot(source_flat)
             if grad_mix: 
                 target_grad = laplacian.dot(target_flat)
-                print(target_grad)
                 for i in range(len(mat_b)):
                     if abs(target_grad[i]) > abs(mat_b[i]):
                         mat_b[i] = target_grad[i]

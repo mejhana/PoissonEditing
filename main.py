@@ -14,7 +14,7 @@ def read_image(clone):
 
 def main():
     clone = True
-    grad_mix = True
+    grad_mix = False
 
     temp, dest = read_image(clone)
     source = temp.copy()
@@ -31,7 +31,7 @@ def main():
         axs[2].imshow(mask, cmap="gray")
         axs[2].set_title('mask')
 
-        plt.savefig("mask.png")
+        plt.savefig("results/mask.png")
     else:
         # save image
         fig, axs = plt.subplots(1, 2)
@@ -40,7 +40,7 @@ def main():
         axs[1].imshow(mask)
         axs[1].set_title('mask')
 
-        plt.savefig("mask.png")
+        plt.savefig("results/mask.png")
 
     image = pe.colour(mask, clone, grad_mix)
 
@@ -53,7 +53,7 @@ def main():
     axs[2].imshow(image)
     axs[2].set_title('editted')
 
-    plt.savefig("output.png")
+    plt.savefig("results/output.png")
 
 if __name__=="__main__":
     main()
