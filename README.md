@@ -3,7 +3,7 @@
 My implementation is based on the paper [poisson image editing](https://www.cs.virginia.edu/~connelly/class/2014/comp_photo/proj2/poisson.pdf). The method is based on solving a Poisson equation, which allows for the transfer of gradients between the two images while preserving the overall structure of the target image.
 
 <p align="center">
-  <img src="images/output.png" alt="output">
+  <img src="results/output.png" alt="output">
 </p>
 
 <h2 align="center">Environment</h2>
